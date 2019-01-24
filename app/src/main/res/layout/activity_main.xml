@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/headerTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Retrofit MySQL Category Filter"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorAccent" />
+
+    <ProgressBar
+        android:id="@+id/mProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateBehavior="cycle"
+        android:visibility="gone" />
+
+	<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Category To Filter:"
+        android:padding="5dp"
+        android:textStyle="italic"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    
+        <RadioGroup
+            android:id="@+id/mRadioGroup"
+			android:orientation="horizontal"
+			 android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+			
+            <RadioButton
+                android:id="@+id/nuclearRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nuclear"
+                android:padding="2dp" />
+            <RadioButton
+                android:id="@+id/plasmaRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plasma"
+				android:padding="2dp" />
+			<RadioButton
+                android:id="@+id/laserRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laser"
+				android:padding="2dp" />
+			<RadioButton
+                android:id="@+id/warpRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Warp"
+				android:padding="2dp" />				
+            <RadioButton
+                android:id="@+id/allRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All"
+				android:padding="2dp" />
+				
+        </RadioGroup>
+
+
+	<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filter Results"
+        android:padding="5dp"
+        android:textStyle="italic"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    
+
+    <ListView
+        android:id="@+id/mListView"
+        android:layout_weight="0.5"
+        android:numColumns="auto_fit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
